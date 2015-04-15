@@ -1,0 +1,15 @@
+{
+  "name": "ezorder-io",
+  "version": "1.0.0",
+  "description": "Websockets for EZorder web app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "~4.0.0",
+    "socket.io": "~0.9.6"
+  },
+  "author": "",
+  "license": "ISC"
+}
