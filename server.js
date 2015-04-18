@@ -3,7 +3,8 @@ var http = require('http').Server(app);
 var io = require('socket.io').listen(http);
 
 app.all('*', function(req, res, next) {
-	res.header('Access-Control-Allow-Origin', 'http://localhost');
+  res.header('Access-Control-Allow-Origin', 'http://localhost');
+	res.header('Access-Control-Allow-Origin', 'https://sheltered-badlands-2237.herokuapp.com');
 	next();
 });
 app.get('/', function(req, res){
