@@ -9,7 +9,7 @@ app.all('*', function(req, res, next) {
 app.get('/', function(req, res){
   //res.sendfile('index.html');
 });
-
+var port = process.env.PORT || 3000
 //io.on('connection', function(socket){
 //  console.log('a user connected');
 //});
@@ -29,6 +29,6 @@ io.on('connection', function(socket){
   socket.on('disconnect', function(){});
 });
 
-http.listen(5000, function(){
-  console.log('listening on *:5000');
+http.listen(port, function(){
+  console.log('listening on *:'+port);
 });
