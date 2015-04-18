@@ -15,6 +15,10 @@ app.get('/', function(req, res){
 //});
 io.on('connection', function(socket){
   console.log('connection');
+  socket.on('customerOrdered', function(message){
+    console.log(message);
+    socket.broadcast.emit('orderPlaced', message);
+  });
   socket.on('sendMessage', function(message){
     console.log(JSON.stringify(message));
     socket
